@@ -7,6 +7,6 @@
 		"typescript": "^5.7.2"
 	},
 	"scripts": {
-		"main": "ts-node src/main.ts"
+		"caesar": "ts-node src/caesar.ts"
 	}
 }
