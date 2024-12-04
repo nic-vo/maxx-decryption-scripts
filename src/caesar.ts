@@ -1,4 +1,4 @@
-const nlEcho = (line: string) => console.log(`\n${line}`);
+import { nlEcho } from './utils';
 
 (async () => {
 	// Check for samples dir for text files
