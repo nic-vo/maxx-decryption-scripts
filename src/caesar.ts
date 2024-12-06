@@ -2,22 +2,29 @@ import * as fs from 'fs/promises';
 import { nlEcho } from './utils';
 import path from 'path';
 
+const inputPath = path.join(process.cwd(), 'samples', 'caesar');
+const outPath = path.join(
+	process.cwd(),
+	'output',
+	'caesar',
+	Date.now().toString(),
+);
+
 (async () => {
-	const dirPath = path.join(process.cwd(), 'samples', 'caesar');
-	const files = await fs.readdir(dirPath);
+	const files = await fs.readdir(inputPath);
 	if (files.length === 0) {
-		nlEcho(`no files to parse in ${dirPath}`);
+		nlEcho(`no files to parse in ${inputPath}`);
 		return;
 	}
 	// For each text file
 	for (const file of files) {
 		// Ingest as string
-		const inputI = await fs.readFile(path.join(dirPath, file), {
+		const inputI = await fs.readFile(path.join(inputPath, file), {
 			encoding: 'utf-8',
 		});
 		const input = inputI.toLowerCase();
 
-		nlEcho(`~~~ File:${file}\n---\n${input.slice(0, 40)}...\n`);
+		nlEcho(`~~~\nFile: ${file}\n---\n${input.slice(0, 40)}...\n`);
 
 		const iteratedStringOutput: string[] = [];
 		for (let i = 1; i < 26; i++) {
@@ -39,19 +46,19 @@ import path from 'path';
 						),
 					);
 				} else {
-					// console.log(input[j]);
 					bumpOneCharOutput.push(input[j]);
 				}
 			}
-			console.log(bumpOneCharOutput.join(''));
 			iteratedStringOutput.push(bumpOneCharOutput.join(''));
 		}
-		// nlEcho(
-		// 	`Output:\n---\n${iteratedStringOutput.map((str) => `${str.slice(0, 40)}...`).join('\n')}\n~~~`,
-		// );
 		// .join() all into string
 		// Check if output dir exists
 		// Create timestamped dir for per-file output
 		// Print 2d array to output file with same name
+		await fs.mkdir(outPath, { recursive: true });
+		await fs.writeFile(
+			path.join(outPath, file),
+			`${input}\n\n${iteratedStringOutput.join('\n')}`,
+		);
 	}
 })();
