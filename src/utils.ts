@@ -1,2 +1,1 @@
-export const nlEcho = async (line: string | Promise<string>) =>
-	console.log(`\n${await line}`);
+export const nlEcho = async (line: string) => console.log(`\n${line}`);
