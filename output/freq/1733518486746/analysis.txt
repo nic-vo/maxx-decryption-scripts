@@ -1,0 +1,28 @@
+lzi ycxl tcyycj nmv lc xcpei xwaxlolwlocj touzisx ox av rsigwijtv mjmpvxox. av tcyumsojh lzi rsigwijtv cr lzi pillisx oj lzi ijtckik yixxmhi mhmojxl lzios meismhi rsigwijtv oj ijhpoxz, vcw tmj aihoj lc ymqi ikwtmlik hwixxix macwl lzi yimjojh. lzi rpmh ox muupiacllcybimjx, mjk lzixi tmj ai rwj lc xcpei av zmjk.
+
+n ==> w  |  1 time
+q ==> k  |  1 time
+b ==> j  |  1 time
+e ==> v  |  3 times
+g ==> q  |  3 times
+u ==> p  |  4 times
+r ==> f  |  6 times
+k ==> d  |  6 times
+p ==> l  |  7 times
+y ==> m  |  8 times
+a ==> b  |  8 times
+s ==> r  |  8 times
+v ==> y  |  9 times
+h ==> g  |  9 times
+t ==> c  |  10 times
+w ==> u  |  10 times
+z ==> h  |  11 times
+o ==> i  |  14 times
+c ==> o  |  16 times
+x ==> s  |  20 times
+m ==> a  |  20 times
+j ==> n  |  21 times
+l ==> t  |  22 times
+i ==> e  |  37 times
+
+the most common way to solve substitution ciphers is by frequency analysis. by comparing the frequency of the letters in the encoded message against their average frequency in english, you can begin to make educated guesses about the meaning. the flag is applebottomjeans, and these can be fun to solve by hand.
